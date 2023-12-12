@@ -46,14 +46,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="favouritesTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="favouritesTab.Designer.cs">
+      <DependentUpon>favouritesTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="homeTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homeTab.Designer.cs">
+      <DependentUpon>homeTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartingScreen.Designer.cs">
+      <DependentUpon>StartingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tabs.Designer.cs">
+      <DependentUpon>tabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usernameTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usernameTab.Designer.cs">
+      <DependentUpon>usernameTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="watchListPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="watchListPage.Designer.cs">
+      <DependentUpon>watchListPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="watchListTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="watchListTab.Designer.cs">
+      <DependentUpon>watchListTab.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="favouritesTab.resx">
+      <DependentUpon>favouritesTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homeTab.resx">
+      <DependentUpon>homeTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +111,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StartingScreen.resx">
+      <DependentUpon>StartingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabs.resx">
+      <DependentUpon>tabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usernameTab.resx">
+      <DependentUpon>usernameTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="watchListPage.resx">
+      <DependentUpon>watchListPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="watchListTab.resx">
+      <DependentUpon>watchListTab.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
