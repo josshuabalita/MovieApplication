@@ -14,10 +14,13 @@ namespace FinalProject_MovieApp
 {
     public partial class StartingScreen : Form
     {
+        private string username = "";
         public StartingScreen()
         {
             InitializeComponent();
+
         }
+
 
         private void startingLabel_Click(object sender, EventArgs e)
         {
@@ -38,6 +41,10 @@ namespace FinalProject_MovieApp
             textBox.Visible = true;
 
             label1.Text = "Enter New Username: ";
+        }
+
+        private void enter_btn_Click(object sender, EventArgs e)
+        {
         }
     }
 }

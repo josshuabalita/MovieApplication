@@ -34,6 +34,8 @@
             this.newUser_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox = new System.Windows.Forms.TextBox();
+            this.enter_btn = new System.Windows.Forms.Button();
+            this.tabs1 = new FinalProject_MovieApp.tabs();
             this.SuspendLayout();
             // 
             // startingLabel
@@ -110,12 +112,35 @@
             this.textBox.TabIndex = 5;
             this.textBox.Visible = false;
             // 
+            // enter_btn
+            // 
+            this.enter_btn.BackColor = System.Drawing.Color.Red;
+            this.enter_btn.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.enter_btn.Font = new System.Drawing.Font("Sans Serif Collection", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enter_btn.ForeColor = System.Drawing.Color.Black;
+            this.enter_btn.Location = new System.Drawing.Point(720, 785);
+            this.enter_btn.Name = "enter_btn";
+            this.enter_btn.Size = new System.Drawing.Size(200, 40);
+            this.enter_btn.TabIndex = 6;
+            this.enter_btn.Text = "Enter";
+            this.enter_btn.UseVisualStyleBackColor = false;
+            this.enter_btn.Click += new System.EventHandler(this.enter_btn_Click);
+            // 
+            // tabs1
+            // 
+            this.tabs1.Location = new System.Drawing.Point(1002, 12);
+            this.tabs1.Name = "tabs1";
+            this.tabs1.Size = new System.Drawing.Size(618, 70);
+            this.tabs1.TabIndex = 7;
+            // 
             // StartingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1632, 854);
+            this.Controls.Add(this.tabs1);
+            this.Controls.Add(this.enter_btn);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.newUser_btn);
@@ -139,5 +164,7 @@
         private System.Windows.Forms.Button newUser_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Button enter_btn;
+        private tabs tabs1;
     }
 }
