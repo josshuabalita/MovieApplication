@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="favouritesPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="favouritesPage.Designer.cs">
+      <DependentUpon>favouritesPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="favouritesTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     <Compile Include="watchListTab.Designer.cs">
       <DependentUpon>watchListTab.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="favouritesPage.resx">
+      <DependentUpon>favouritesPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="favouritesTab.resx">
       <DependentUpon>favouritesTab.cs</DependentUpon>
     </EmbeddedResource>

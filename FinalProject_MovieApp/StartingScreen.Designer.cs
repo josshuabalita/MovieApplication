@@ -63,6 +63,7 @@
             // 
             // returningUser_btn
             // 
+            this.returningUser_btn.AutoSize = true;
             this.returningUser_btn.BackColor = System.Drawing.Color.Red;
             this.returningUser_btn.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.returningUser_btn.Font = new System.Drawing.Font("Sans Serif Collection", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -77,6 +78,7 @@
             // 
             // newUser_btn
             // 
+            this.newUser_btn.AutoSize = true;
             this.newUser_btn.BackColor = System.Drawing.Color.Red;
             this.newUser_btn.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.newUser_btn.Font = new System.Drawing.Font("Sans Serif Collection", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,13 +114,14 @@
             // 
             // enter_btn
             // 
+            this.enter_btn.AutoSize = true;
             this.enter_btn.BackColor = System.Drawing.Color.Red;
             this.enter_btn.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.enter_btn.Font = new System.Drawing.Font("Sans Serif Collection", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enter_btn.ForeColor = System.Drawing.Color.Black;
             this.enter_btn.Location = new System.Drawing.Point(720, 785);
             this.enter_btn.Name = "enter_btn";
-            this.enter_btn.Size = new System.Drawing.Size(200, 40);
+            this.enter_btn.Size = new System.Drawing.Size(200, 49);
             this.enter_btn.TabIndex = 6;
             this.enter_btn.Text = "Enter";
             this.enter_btn.UseVisualStyleBackColor = false;
@@ -128,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1632, 854);
             this.Controls.Add(this.enter_btn);
