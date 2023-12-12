@@ -32,12 +32,12 @@ namespace FinalProject_MovieApp
 
         private void OpenFavouritesPage()
         {
-            watchListPage watchListForm = new watchListPage();
+            favouritesPage faveForm = new favouritesPage();
             if (this.ParentForm != null)
             {
                 this.ParentForm.Hide();
-                watchListForm.Closed += (s, args) => this.ParentForm.Close();
-                watchListForm.Show();
+                faveForm.Closed += (s, args) => this.ParentForm.Close();
+                faveForm.Show();
             }
         }
     }
