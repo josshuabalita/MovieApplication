@@ -51,14 +51,13 @@ namespace FinalProject_MovieApp
                             // Create an instance of Homescreen
                             Homescreen homeScreen = new Homescreen(); // Correct class name
 
-                            // Close the current form (StartingScreen)
+                            //usernameTab userTab = new usernameTab(enteredUsername);
+
+                            // Hide the current form (StartingScreen) instead of closing it
                             this.Hide();
 
-                            // Show the new form as a dialog
-                            homeScreen.ShowDialog();
-
-                            // Close the application when the Homescreen form is closed
-                            Application.Exit();
+                            // Show the new form
+                            homeScreen.Show();
                         }
                         else
                         {
@@ -69,8 +68,6 @@ namespace FinalProject_MovieApp
                     {
                         RegisterUser(enteredUsername);
                         MessageBox.Show("User registered successfully!");
-
-                        
                     }
                 }
                 else

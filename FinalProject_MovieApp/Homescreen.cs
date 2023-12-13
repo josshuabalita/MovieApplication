@@ -233,7 +233,7 @@ namespace FinalProject_MovieApp
 
             if (label != null)
             {
-                string truncatedTitle = TruncateText(movie.Title, 20);
+                string truncatedTitle = TruncateText(movie.Title, 40);
                 label.Text = truncatedTitle;
                 CustomizeLabel(label);
                 label.Show();
@@ -246,7 +246,7 @@ namespace FinalProject_MovieApp
 
             if (label != null)
             {
-                string truncatedName = TruncateText(tvShow.Name, 20);
+                string truncatedName = TruncateText(tvShow.Name, 40);
                 label.Text = truncatedName;
                 CustomizeLabel(label);
                 label.Show();
@@ -259,7 +259,7 @@ namespace FinalProject_MovieApp
 
             if (label != null)
             {
-                string truncatedContent = TruncateText($" {review.Content}\n", 30);
+                string truncatedContent = TruncateText($" {review.Content}\n", 40);
                 label.Text += truncatedContent;
                 label.Text += $"---\n";
                 CustomizeLabel(label);
@@ -288,8 +288,8 @@ namespace FinalProject_MovieApp
 
         private void CustomizeLabel(Label label)
         {
-            label.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label.ForeColor = System.Drawing.Color.DarkBlue;
+            label.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label.ForeColor = System.Drawing.Color.White;
         }
 
         private void HideAllLabels()
@@ -334,6 +334,14 @@ namespace FinalProject_MovieApp
             public string Content { get; set; }
         }
 
-       
+        private void Homescreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
