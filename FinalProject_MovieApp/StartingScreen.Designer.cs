@@ -47,7 +47,6 @@
             this.startingLabel.Size = new System.Drawing.Size(1230, 236);
             this.startingLabel.TabIndex = 0;
             this.startingLabel.Text = "Movie Streams";
-            this.startingLabel.Click += new System.EventHandler(this.startingLabel_Click);
             // 
             // startingLabel_2
             // 
