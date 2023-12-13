@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace FinalProject_MovieApp
 {
-    public partial class Homescreen : System.Windows.Forms.Form
+    public partial class Homescreen : Form
     {
         private const string ApiKey = "74bdf5aa8da3da84930433e3afb7124e";
         private const string MovieBaseUrl = "https://api.themoviedb.org/3/discover/movie";
@@ -23,16 +23,15 @@ namespace FinalProject_MovieApp
         {
             InitializeComponent();
             InitializeEventHandlers();
-            HideAllLabels(); // Hide labels initially
+            HideAllLabels();
             this.Text = "MovieStreams";
-
+            FetchAndDisplayData(MovieBaseUrl, MaxMoviesPerLabels);
+            FetchAndDisplayData(TVBaseUrl, MaxTVShowsPerLabels);
+            FetchAndDisplayReviews(670292);
         }
 
         private void InitializeEventHandlers()
         {
-            btnFetchMovies.Click += async (sender, e) => await FetchAndDisplayData(MovieBaseUrl, MaxMoviesPerLabels);
-            btnFetchTV.Click += async (sender, e) => await FetchAndDisplayData(TVBaseUrl, MaxTVShowsPerLabels);
-            btnFetchReviews.Click += async (sender, e) => await FetchAndDisplayReviews(670292);
         }
 
         private async Task FetchAndDisplayData(string apiUrl, int maxItems)
@@ -164,7 +163,6 @@ namespace FinalProject_MovieApp
                     {
                         using (var stream = await response.Content.ReadAsStreamAsync())
                         {
-                            // Resize the image to fit the PictureBox
                             Image originalImage = Image.FromStream(stream);
                             Image resizedImage = ResizeImage(originalImage, pictureBox.Width, pictureBox.Height);
 
@@ -183,7 +181,6 @@ namespace FinalProject_MovieApp
             }
         }
 
-        // Inside the DisplayMovieBackdrop method
         private async Task DisplayMovieBackdrop(string backdropPath, PictureBox pictureBox)
         {
             try
@@ -197,7 +194,6 @@ namespace FinalProject_MovieApp
                     {
                         using (var stream = await response.Content.ReadAsStreamAsync())
                         {
-                            // Resize the image to fit the PictureBox
                             Image originalImage = Image.FromStream(stream);
                             Image resizedImage = ResizeImage(originalImage, pictureBox.Width, pictureBox.Height);
 
@@ -207,8 +203,8 @@ namespace FinalProject_MovieApp
                     else
                     {
                         string errorMessage = $"Error downloading backdrop: {response.StatusCode} - {response.ReasonPhrase}";
-                        Console.WriteLine(errorMessage); // Log the error to the console
-                        Console.WriteLine(imageUrl); // Log the error to the console
+                        Console.WriteLine(errorMessage);
+                        Console.WriteLine(imageUrl);
                         MessageBox.Show(errorMessage);
                     }
                 }
@@ -216,12 +212,11 @@ namespace FinalProject_MovieApp
             catch (Exception ex)
             {
                 string errorMessage = $"Error: {ex.Message}";
-                Console.WriteLine(errorMessage); // Log the error to the console
+                Console.WriteLine(errorMessage);
                 MessageBox.Show(errorMessage);
             }
         }
 
-        // Add the following method to resize the image
         private Image ResizeImage(Image originalImage, int targetWidth, int targetHeight)
         {
             Bitmap resizedImage = new Bitmap(targetWidth, targetHeight);
@@ -232,7 +227,6 @@ namespace FinalProject_MovieApp
             return resizedImage;
         }
 
-
         private void AddMovieTitleToLabel(Movie movie, int labelNumber)
         {
             Label label = GetLabelByNumber(labelNumber);
@@ -242,7 +236,7 @@ namespace FinalProject_MovieApp
                 string truncatedTitle = TruncateText(movie.Title, 20);
                 label.Text = truncatedTitle;
                 CustomizeLabel(label);
-                label.Show(); // Set the visibility to true
+                label.Show();
             }
         }
 
@@ -255,7 +249,7 @@ namespace FinalProject_MovieApp
                 string truncatedName = TruncateText(tvShow.Name, 20);
                 label.Text = truncatedName;
                 CustomizeLabel(label);
-                label.Show(); // Set the visibility to true
+                label.Show();
             }
         }
 
@@ -269,7 +263,7 @@ namespace FinalProject_MovieApp
                 label.Text += truncatedContent;
                 label.Text += $"---\n";
                 CustomizeLabel(label);
-                label.Show(); // Set the visibility to true
+                label.Show();
             }
         }
 
@@ -325,13 +319,13 @@ namespace FinalProject_MovieApp
         {
             public int Id { get; set; }
             public string Title { get; set; }
-            public string backdrop_path { get; set; } // Add this property
+            public string backdrop_path { get; set; }
         }
 
         private class TVShow
         {
             public string Name { get; set; }
-            public string backdrop_path { get; set; } // Add this property
+            public string backdrop_path { get; set; }
         }
 
         private class MovieReview

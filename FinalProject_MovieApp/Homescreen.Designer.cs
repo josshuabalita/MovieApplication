@@ -34,9 +34,6 @@
             this.WatchListButton = new System.Windows.Forms.Button();
             this.UserNameButton = new System.Windows.Forms.Button();
             this.SearchResultsButton = new System.Windows.Forms.Button();
-            this.btnFetchTV = new System.Windows.Forms.Button();
-            this.btnFetchReviews = new System.Windows.Forms.Button();
-            this.btnFetchMovies = new System.Windows.Forms.Button();
             this.SearchByTitleButton = new System.Windows.Forms.Button();
             this.ViewAllMoviesButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,6 +61,9 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.Movies = new System.Windows.Forms.Label();
+            this.TVShows = new System.Windows.Forms.Label();
+            this.Reviews = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -130,33 +130,6 @@
             this.SearchResultsButton.TabIndex = 5;
             this.SearchResultsButton.Text = "Search Results";
             this.SearchResultsButton.UseVisualStyleBackColor = true;
-            // 
-            // btnFetchTV
-            // 
-            this.btnFetchTV.Location = new System.Drawing.Point(165, 59);
-            this.btnFetchTV.Name = "btnFetchTV";
-            this.btnFetchTV.Size = new System.Drawing.Size(132, 62);
-            this.btnFetchTV.TabIndex = 11;
-            this.btnFetchTV.Text = "Trending TV";
-            this.btnFetchTV.UseVisualStyleBackColor = true;
-            // 
-            // btnFetchReviews
-            // 
-            this.btnFetchReviews.Location = new System.Drawing.Point(354, 79);
-            this.btnFetchReviews.Name = "btnFetchReviews";
-            this.btnFetchReviews.Size = new System.Drawing.Size(132, 62);
-            this.btnFetchReviews.TabIndex = 17;
-            this.btnFetchReviews.Text = "Reviews";
-            this.btnFetchReviews.UseVisualStyleBackColor = true;
-            // 
-            // btnFetchMovies
-            // 
-            this.btnFetchMovies.Location = new System.Drawing.Point(17, 56);
-            this.btnFetchMovies.Name = "btnFetchMovies";
-            this.btnFetchMovies.Size = new System.Drawing.Size(132, 62);
-            this.btnFetchMovies.TabIndex = 24;
-            this.btnFetchMovies.Text = "Trending Movies";
-            this.btnFetchMovies.UseVisualStyleBackColor = true;
             // 
             // SearchByTitleButton
             // 
@@ -386,11 +359,41 @@
             this.pictureBox10.TabIndex = 50;
             this.pictureBox10.TabStop = false;
             // 
-            // Form1
+            // Movies
+            // 
+            this.Movies.AutoSize = true;
+            this.Movies.Location = new System.Drawing.Point(14, 89);
+            this.Movies.Name = "Movies";
+            this.Movies.Size = new System.Drawing.Size(51, 16);
+            this.Movies.TabIndex = 55;
+            this.Movies.Text = "Movies";
+            // 
+            // TVShows
+            // 
+            this.TVShows.AutoSize = true;
+            this.TVShows.Location = new System.Drawing.Point(178, 89);
+            this.TVShows.Name = "TVShows";
+            this.TVShows.Size = new System.Drawing.Size(68, 16);
+            this.TVShows.TabIndex = 56;
+            this.TVShows.Text = "TV Shows";
+            // 
+            // Reviews
+            // 
+            this.Reviews.AutoSize = true;
+            this.Reviews.Location = new System.Drawing.Point(514, 89);
+            this.Reviews.Name = "Reviews";
+            this.Reviews.Size = new System.Drawing.Size(59, 16);
+            this.Reviews.TabIndex = 57;
+            this.Reviews.Text = "Reviews";
+            // 
+            // Homescreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 510);
+            this.Controls.Add(this.Reviews);
+            this.Controls.Add(this.TVShows);
+            this.Controls.Add(this.Movies);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox8);
@@ -417,19 +420,15 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ViewAllMoviesButton);
-            this.Controls.Add(this.btnFetchMovies);
             this.Controls.Add(this.SearchByTitleButton);
-            this.Controls.Add(this.btnFetchReviews);
-            this.Controls.Add(this.btnFetchTV);
             this.Controls.Add(this.SearchResultsButton);
             this.Controls.Add(this.UserNameButton);
             this.Controls.Add(this.WatchListButton);
             this.Controls.Add(this.FavoritesButton);
             this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.AppTitle);
-            this.Name = "Form1";
+            this.Name = "Homescreen";
             this.Text = "Form1";
-    
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -453,9 +452,6 @@
         private System.Windows.Forms.Button WatchListButton;
         private System.Windows.Forms.Button UserNameButton;
         private System.Windows.Forms.Button SearchResultsButton;
-        private System.Windows.Forms.Button btnFetchTV;
-        private System.Windows.Forms.Button btnFetchReviews;
-        private System.Windows.Forms.Button btnFetchMovies;
         private System.Windows.Forms.Button SearchByTitleButton;
         private System.Windows.Forms.Button ViewAllMoviesButton;
         private System.Windows.Forms.Label label1;
@@ -483,6 +479,9 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label Movies;
+        private System.Windows.Forms.Label TVShows;
+        private System.Windows.Forms.Label Reviews;
     }
 }
 
