@@ -32,12 +32,12 @@ namespace FinalProject_MovieApp
 
         private void OpenHomePage()
         {
-            watchListPage watchListForm = new watchListPage();
+            Homescreen homescreenForm = new Homescreen();
             if (this.ParentForm != null)
             {
                 this.ParentForm.Hide();
-                watchListForm.Closed += (s, args) => this.ParentForm.Close();
-                watchListForm.Show();
+                homescreenForm.Closed += (s, args) => this.ParentForm.Close();
+                homescreenForm.Show();
             }
         }
     }
