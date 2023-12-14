@@ -1,6 +1,6 @@
 ﻿namespace FinalProject_MovieApp
 {
-    partial class favouritesPage
+    partial class FavouritesPage
     {
         /// <summary>
         /// Required designer variable.
@@ -41,12 +41,13 @@
             this.removeBtn = new System.Windows.Forms.Button();
             this.startingLabel = new System.Windows.Forms.Label();
             this.startingLabel_2 = new System.Windows.Forms.Label();
-            this.tabs1 = new FinalProject_MovieApp.tabs();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tabs1 = new FinalProject_MovieApp.tabs();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -184,13 +185,6 @@
             this.startingLabel_2.Text = "Favourites";
             this.startingLabel_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabs1
-            // 
-            this.tabs1.Location = new System.Drawing.Point(1002, 16);
-            this.tabs1.Name = "tabs1";
-            this.tabs1.Size = new System.Drawing.Size(618, 70);
-            this.tabs1.TabIndex = 15;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -236,12 +230,30 @@
             this.label5.TabIndex = 33;
             this.label5.Text = "label5";
             // 
-            // favouritesPage
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(414, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "label6";
+            // 
+            // tabs1
+            // 
+            this.tabs1.Location = new System.Drawing.Point(1002, 16);
+            this.tabs1.Name = "tabs1";
+            this.tabs1.Size = new System.Drawing.Size(618, 70);
+            this.tabs1.TabIndex = 15;
+            // 
+            // FavouritesPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1540, 845);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -261,7 +273,7 @@
             this.Controls.Add(this.startingLabel);
             this.Controls.Add(this.startingLabel_2);
             this.Controls.Add(this.tabs1);
-            this.Name = "favouritesPage";
+            this.Name = "FavouritesPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Streams - Favourites";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -300,5 +312,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

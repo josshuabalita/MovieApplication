@@ -16,5 +16,7 @@ namespace FinalProject_MovieApp
         {
             InitializeComponent();
         }
+
+       
     }
 }

@@ -6,7 +6,7 @@ namespace FinalProject_MovieApp
 {
     public partial class StartingScreen : Form
     {
-        private string username = "";
+        public string username = "";
         private const string filePath = "userCredentials.txt";
         private bool isReturningUser = false;
 
@@ -48,15 +48,10 @@ namespace FinalProject_MovieApp
                         {
                             MessageBox.Show("Login successful!");
 
-                            // Create an instance of Homescreen
-                            Homescreen homeScreen = new Homescreen(); // Correct class name
+                            // Pass the username to the Homescreen constructor
+                            Homescreen homeScreen = new Homescreen(enteredUsername);
 
-                            //usernameTab userTab = new usernameTab(enteredUsername);
-
-                            // Hide the current form (StartingScreen) instead of closing it
                             this.Hide();
-
-                            // Show the new form
                             homeScreen.Show();
                         }
                         else
@@ -68,6 +63,12 @@ namespace FinalProject_MovieApp
                     {
                         RegisterUser(enteredUsername);
                         MessageBox.Show("User registered successfully!");
+
+                        // Pass the username to the Homescreen constructor
+                        Homescreen homeScreen = new Homescreen(enteredUsername);
+
+                        this.Hide();
+                        homeScreen.Show();
                     }
                 }
                 else
