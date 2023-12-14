@@ -18,21 +18,98 @@ namespace FinalProject_MovieApp
 
         private const int MaxMoviesPerLabels = 5;
         private const int MaxTVShowsPerLabels = 5;
-
+  
         public Homescreen()
         {
             InitializeComponent();
             InitializeEventHandlers();
             HideAllLabels();
             this.Text = "MovieStreams";
-            FetchAndDisplayData(MovieBaseUrl, MaxMoviesPerLabels);
-            FetchAndDisplayData(TVBaseUrl, MaxTVShowsPerLabels);
+            InitializeAsync();
+
+            pictureBox16.Visible = false;
+            pictureBox17.Visible = false;
+            pictureBox18.Visible = false;
+            pictureBox19.Visible = false;
+            pictureBox20.Visible = false;
+        }
+
+
+        private async void InitializeAsync()
+        {
+            await DisplayMoviesAndTVShowsAsync();
             FetchAndDisplayReviews(670292);
         }
 
+        private async Task DisplayMoviesAndTVShowsAsync()
+        {
+            await FetchAndDisplayData(MovieBaseUrl, MaxMoviesPerLabels);
+            await FetchAndDisplayData(TVBaseUrl, MaxTVShowsPerLabels);
+        }
+
+
         private void InitializeEventHandlers()
         {
+            SearchByTitleButton.Click += SearchByTitleButton_Click;
+
         }
+
+        private async void SearchByTitleButton_Click(object sender, EventArgs e)
+        {
+            pictureBox16.Visible = true;
+            pictureBox17.Visible = true;
+            pictureBox18.Visible = true;
+            pictureBox19.Visible = true;
+            pictureBox20.Visible = true;
+
+            try
+            {
+                string searchQuery = textBox1.Text.Trim();
+
+                if (!string.IsNullOrEmpty(searchQuery))
+                {
+                    const string searchMovieBaseUrl = "https://api.themoviedb.org/3/search/movie";
+                    string searchUrl = $"{searchMovieBaseUrl}?api_key={ApiKey}&query={searchQuery}&page_size=5";
+
+                    using (HttpClient client = new HttpClient())
+                    {
+                        HttpResponseMessage response = await client.GetAsync(searchUrl);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string responseData = await response.Content.ReadAsStringAsync();
+                            MovieResponse searchResponse = JsonConvert.DeserializeObject<MovieResponse>(responseData);
+                            DisplaySearchedMovies(searchResponse.Results);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a search query.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+        private async Task DisplaySearchedMovies(List<Movie> movies)
+        {
+            int startingIndex = 11; // Set the index where the search results should start appearing
+            int labelIndex = 16;
+            for (int i = 0; i < Math.Min(5, movies.Count); i++)
+            {
+                AddMovieTitleToLabel(movies[i], labelIndex + i);
+                await DisplayMoviePoster(movies[i].backdrop_path, GetPictureBoxByNumber(startingIndex + i));
+            }
+        }
+
+
 
         private async Task FetchAndDisplayData(string apiUrl, int maxItems)
         {
@@ -95,9 +172,9 @@ namespace FinalProject_MovieApp
             }
         }
 
-        private async Task DisplayMovies(List<Movie> movies, int maxItems)
+        private async Task DisplayMovies(List<Movie> movies, int maxItems, bool clearControls = true)
         {
-            ClearLabelAndPictureBoxControls();
+          
 
             for (int i = 0; i < Math.Min(maxItems, movies.Count); i++)
             {
@@ -106,16 +183,18 @@ namespace FinalProject_MovieApp
             }
         }
 
+
         private async Task DisplayTVShows(List<TVShow> tvShows, int maxItems)
         {
-            ClearLabelAndPictureBoxControls();
+           
 
             for (int i = 0; i < Math.Min(maxItems, tvShows.Count); i++)
             {
-                AddTVShowTitleToLabel(tvShows[i], i + 6);
+                AddTVShowTitleToLabel(tvShows[i], i + 6); // Ensure you are using the correct label number here
                 await DisplayMovieBackdrop(tvShows[i].backdrop_path, GetPictureBoxByNumber(i + 6));
             }
         }
+
 
         private void DisplayReviews(List<MovieReview> reviews)
         {
@@ -125,14 +204,7 @@ namespace FinalProject_MovieApp
             }
         }
 
-        private void ClearLabelAndPictureBoxControls()
-        {
-            for (int i = 1; i <= 10; i++)
-            {
-                ClearPictureBox(GetPictureBoxByNumber(i));
-                ClearLabel(GetLabelByNumber(i));
-            }
-        }
+     
 
         private void ClearPictureBox(PictureBox pictureBox)
         {
@@ -253,6 +325,7 @@ namespace FinalProject_MovieApp
             }
         }
 
+
         private void AddReviewToLabel(MovieReview review, int labelNumber)
         {
             Label label = GetLabelByNumber(labelNumber);
@@ -340,6 +413,31 @@ namespace FinalProject_MovieApp
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox20_Click(object sender, EventArgs e)
         {
 
         }

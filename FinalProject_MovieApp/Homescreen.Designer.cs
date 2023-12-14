@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homescreen));
             this.SearchByTitleButton = new System.Windows.Forms.Button();
             this.ViewAllMoviesButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Movies = new System.Windows.Forms.Label();
-            this.tabs1 = new FinalProject_MovieApp.tabs();
             this.startingLabel = new System.Windows.Forms.Label();
             this.Tvshows = new System.Windows.Forms.Label();
             this.Reviews = new System.Windows.Forms.Label();
@@ -63,6 +63,22 @@
             this.search = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.searchResults = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.tabs1 = new FinalProject_MovieApp.tabs();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -73,12 +89,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchByTitleButton
             // 
             this.SearchByTitleButton.BackColor = System.Drawing.Color.Red;
-            this.SearchByTitleButton.Font = new System.Drawing.Font("Sans Serif Collection", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchByTitleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchByTitleButton.Location = new System.Drawing.Point(1515, 188);
             this.SearchByTitleButton.Margin = new System.Windows.Forms.Padding(2);
             this.SearchByTitleButton.Name = "SearchByTitleButton";
@@ -90,7 +116,7 @@
             // ViewAllMoviesButton
             // 
             this.ViewAllMoviesButton.BackColor = System.Drawing.Color.Black;
-            this.ViewAllMoviesButton.Font = new System.Drawing.Font("Sans Serif Collection", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewAllMoviesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewAllMoviesButton.ForeColor = System.Drawing.Color.Red;
             this.ViewAllMoviesButton.Location = new System.Drawing.Point(1364, 753);
             this.ViewAllMoviesButton.Margin = new System.Windows.Forms.Padding(2);
@@ -153,6 +179,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(551, 237);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
@@ -248,54 +275,47 @@
             // Movies
             // 
             this.Movies.AutoSize = true;
-            this.Movies.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Movies.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Movies.ForeColor = System.Drawing.Color.Red;
             this.Movies.Location = new System.Drawing.Point(115, 127);
             this.Movies.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Movies.Name = "Movies";
-            this.Movies.Size = new System.Drawing.Size(157, 59);
+            this.Movies.Size = new System.Drawing.Size(90, 29);
             this.Movies.TabIndex = 55;
             this.Movies.Text = "Movies";
-            // 
-            // tabs1
-            // 
-            this.tabs1.Location = new System.Drawing.Point(1002, 12);
-            this.tabs1.Name = "tabs1";
-            this.tabs1.Size = new System.Drawing.Size(618, 70);
-            this.tabs1.TabIndex = 58;
             // 
             // startingLabel
             // 
             this.startingLabel.AutoSize = true;
-            this.startingLabel.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startingLabel.ForeColor = System.Drawing.Color.Red;
             this.startingLabel.Location = new System.Drawing.Point(12, 23);
             this.startingLabel.Name = "startingLabel";
-            this.startingLabel.Size = new System.Drawing.Size(308, 59);
+            this.startingLabel.Size = new System.Drawing.Size(186, 29);
             this.startingLabel.TabIndex = 59;
             this.startingLabel.Text = "Movie Streams";
             // 
             // Tvshows
             // 
             this.Tvshows.AutoSize = true;
-            this.Tvshows.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tvshows.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tvshows.ForeColor = System.Drawing.Color.Red;
             this.Tvshows.Location = new System.Drawing.Point(489, 127);
             this.Tvshows.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Tvshows.Name = "Tvshows";
-            this.Tvshows.Size = new System.Drawing.Size(207, 59);
+            this.Tvshows.Size = new System.Drawing.Size(123, 29);
             this.Tvshows.TabIndex = 60;
             this.Tvshows.Text = "TV Shows";
             // 
             // Reviews
             // 
             this.Reviews.AutoSize = true;
-            this.Reviews.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reviews.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reviews.ForeColor = System.Drawing.Color.Red;
             this.Reviews.Location = new System.Drawing.Point(901, 127);
             this.Reviews.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Reviews.Name = "Reviews";
-            this.Reviews.Size = new System.Drawing.Size(183, 59);
+            this.Reviews.Size = new System.Drawing.Size(105, 29);
             this.Reviews.TabIndex = 61;
             this.Reviews.Text = "Reviews";
             // 
@@ -392,12 +412,12 @@
             // search
             // 
             this.search.AutoSize = true;
-            this.search.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search.ForeColor = System.Drawing.Color.Red;
             this.search.Location = new System.Drawing.Point(1333, 127);
             this.search.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(177, 59);
+            this.search.Size = new System.Drawing.Size(107, 29);
             this.search.TabIndex = 63;
             this.search.Text = "Search...";
             // 
@@ -411,14 +431,161 @@
             // searchResults
             // 
             this.searchResults.AutoSize = true;
-            this.searchResults.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchResults.ForeColor = System.Drawing.Color.Red;
             this.searchResults.Location = new System.Drawing.Point(1333, 301);
             this.searchResults.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.searchResults.Name = "searchResults";
-            this.searchResults.Size = new System.Drawing.Size(170, 59);
+            this.searchResults.Size = new System.Drawing.Size(99, 29);
             this.searchResults.TabIndex = 65;
             this.searchResults.Text = "Results:";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Location = new System.Drawing.Point(1125, 363);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox11.TabIndex = 66;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Location = new System.Drawing.Point(1125, 446);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox12.TabIndex = 67;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Location = new System.Drawing.Point(1125, 536);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox13.TabIndex = 68;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Location = new System.Drawing.Point(1125, 619);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox14.TabIndex = 69;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Location = new System.Drawing.Point(1125, 691);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox15.TabIndex = 70;
+            this.pictureBox15.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(1288, 373);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 13);
+            this.label16.TabIndex = 71;
+            this.label16.Text = "label16";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(1288, 473);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(41, 13);
+            this.label17.TabIndex = 72;
+            this.label17.Text = "label17";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(1288, 558);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 73;
+            this.label18.Text = "label18";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(1288, 642);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(41, 13);
+            this.label19.TabIndex = 74;
+            this.label19.Text = "label19";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(1288, 717);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(41, 13);
+            this.label20.TabIndex = 75;
+            this.label20.Text = "label20";
+            // 
+            // tabs1
+            // 
+            this.tabs1.Location = new System.Drawing.Point(1002, 12);
+            this.tabs1.Name = "tabs1";
+            this.tabs1.Size = new System.Drawing.Size(618, 70);
+            this.tabs1.TabIndex = 58;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.Location = new System.Drawing.Point(1442, 363);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox16.TabIndex = 76;
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(1442, 446);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox17.TabIndex = 77;
+            this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(1442, 536);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox18.TabIndex = 78;
+            this.pictureBox18.TabStop = false;
+            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
+            this.pictureBox19.Location = new System.Drawing.Point(1442, 619);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox19.TabIndex = 79;
+            this.pictureBox19.TabStop = false;
+            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
+            this.pictureBox20.Location = new System.Drawing.Point(1442, 691);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox20.TabIndex = 80;
+            this.pictureBox20.TabStop = false;
+            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
             // 
             // Homescreen
             // 
@@ -426,7 +593,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1632, 854);
+            this.ClientSize = new System.Drawing.Size(1540, 845);
+            this.Controls.Add(this.pictureBox20);
+            this.Controls.Add(this.pictureBox19);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.searchResults);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.search);
@@ -477,6 +659,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,6 +710,21 @@
         private System.Windows.Forms.Label search;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label searchResults;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox pictureBox20;
     }
 }
 
