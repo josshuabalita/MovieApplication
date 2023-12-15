@@ -15,7 +15,6 @@ namespace FinalProject_MovieApp
         private const string ApiKey = "74bdf5aa8da3da84930433e3afb7124e";
         private const string MovieBaseUrl = "https://api.themoviedb.org/3/discover/movie";
         private const string TVBaseUrl = "https://api.themoviedb.org/3/discover/tv";
-        private const string ReviewsBaseUrl = "https://api.themoviedb.org/3/movie/";
 
         private const int MaxMoviesPerLabels = 5;
         private const int MaxTVShowsPerLabels = 5;
@@ -47,7 +46,6 @@ namespace FinalProject_MovieApp
         {
 
             await DisplayMoviesAndTVShowsAsync();
-            FetchAndDisplayReviews(670292);
         }
 
         private async Task DisplayMoviesAndTVShowsAsync()
@@ -110,6 +108,9 @@ namespace FinalProject_MovieApp
         }
        public string path1;
         public string path2;
+        public string path3;
+        public string path4;
+        public string path5;
 
         private async Task DisplaySearchedMovies(List<Movie> movies)
         {
@@ -119,6 +120,9 @@ namespace FinalProject_MovieApp
             {
                 path1 = movies[0].backdrop_path;
                 path2 = movies[1].backdrop_path;
+                path3 = movies[2].backdrop_path;
+                path4 = movies[3].backdrop_path;
+                path5 = movies[4].backdrop_path;
 
                 MessageBox.Show($"Tag: {path1}", "Movie Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -175,31 +179,7 @@ namespace FinalProject_MovieApp
             }
         }
 
-        private async Task FetchAndDisplayReviews(int movieId)
-        {
-            try
-            {
-                using (HttpClient client = new HttpClient())
-                {
-                    HttpResponseMessage response = await client.GetAsync($"{ReviewsBaseUrl}{movieId}/reviews?api_key={ApiKey}");
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string responseData = await response.Content.ReadAsStringAsync();
-                        MovieReviewResponse reviewResponse = JsonConvert.DeserializeObject<MovieReviewResponse>(responseData);
-                        DisplayReviews(reviewResponse.Results);
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-        }
+      
 
         private async Task DisplayMovies(List<Movie> movies, int maxItems, bool clearControls = true)
         {
@@ -225,15 +205,7 @@ namespace FinalProject_MovieApp
         }
 
 
-        private void DisplayReviews(List<MovieReview> reviews)
-        {
-            for (int i = 0; i < Math.Min(5, reviews.Count); i++)
-            {
-                AddReviewToLabel(reviews[i], i + 11);
-            }
-        }
-
-     
+       
 
         private void ClearPictureBox(PictureBox pictureBox)
         {
@@ -355,20 +327,7 @@ namespace FinalProject_MovieApp
         }
 
 
-        private void AddReviewToLabel(MovieReview review, int labelNumber)
-        {
-            Label label = GetLabelByNumber(labelNumber);
-
-            if (label != null)
-            {
-                string truncatedContent = TruncateText($" {review.Content}\n", 40);
-                label.Text += truncatedContent;
-                label.Text += $"---\n";
-                CustomizeLabel(label);
-                label.Show();
-            }
-        }
-
+        
         private string TruncateText(string text, int maxLength)
         {
             if (text.Length > maxLength)
@@ -412,10 +371,7 @@ namespace FinalProject_MovieApp
             public List<TVShow> Results { get; set; }
         }
 
-        private class MovieReviewResponse
-        {
-            public List<MovieReview> Results { get; set; }
-        }
+       
 
         private class Movie
         {
@@ -430,12 +386,7 @@ namespace FinalProject_MovieApp
             public string backdrop_path { get; set; }
         }
 
-        private class MovieReview
-        {
-            public string Author { get; set; }
-            public string Content { get; set; }
-        }
-
+       
         private void Homescreen_Load(object sender, EventArgs e)
         {
 
@@ -519,17 +470,76 @@ namespace FinalProject_MovieApp
 
         private void pictureBox18_Click(object sender, EventArgs e)
         {
+            // Get the movie details associated with pictureBox11 from its Tag property
 
+            string imageUrl = $"https://image.tmdb.org/t/p/w500/{path3}";
+
+
+            // Assuming movie is not null
+
+
+            // Get the original poster path and label text
+
+            string labelText = GetLabelText(17);
+
+            // Save the information to a file for the current username
+            SaveUserPreference(username, imageUrl, labelText);
+            MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            FavouritesPage favouritesPage = new FavouritesPage(username);
+            favouritesPage.Show();
         }
 
         private void pictureBox19_Click(object sender, EventArgs e)
         {
+            // Get the movie details associated with pictureBox11 from its Tag property
 
+            string imageUrl = $"https://image.tmdb.org/t/p/w500/{path4}";
+
+
+            // Assuming movie is not null
+
+
+            // Get the original poster path and label text
+
+            string labelText = GetLabelText(17);
+
+            // Save the information to a file for the current username
+            SaveUserPreference(username, imageUrl, labelText);
+            MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            FavouritesPage favouritesPage = new FavouritesPage(username);
+            favouritesPage.Show();
         }
 
         private void pictureBox20_Click(object sender, EventArgs e)
         {
+            // Get the movie details associated with pictureBox11 from its Tag property
 
+            string imageUrl = $"https://image.tmdb.org/t/p/w500/{path5}";
+
+
+            // Assuming movie is not null
+
+
+            // Get the original poster path and label text
+
+            string labelText = GetLabelText(17);
+
+            // Save the information to a file for the current username
+            SaveUserPreference(username, imageUrl, labelText);
+            MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            FavouritesPage favouritesPage = new FavouritesPage(username);
+            favouritesPage.Show();
         }
+
+        private void ViewAllMoviesButton_Click(object sender, EventArgs e)
+        {
+            // Assuming movieByGenreForm is an instance of the MovieByGenre form
+            ReviewsPage movieByGenreForm = new ReviewsPage();
+            movieByGenreForm.Show();
+        }
+
     }
 }

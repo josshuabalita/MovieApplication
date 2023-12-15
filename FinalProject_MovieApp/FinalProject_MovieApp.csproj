@@ -82,6 +82,7 @@
     <Compile Include="homeTab.Designer.cs">
       <DependentUpon>homeTab.cs</DependentUpon>
     </Compile>
+
     <Compile Include="InputDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +90,14 @@
       <DependentUpon>InputDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Microsoft\VisualBasic\Interaction.cs" />
+
+    <Compile Include="ReviewsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewsPage.Designer.cs">
+      <DependentUpon>ReviewsPage.cs</DependentUpon>
+    </Compile>
+
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartingScreen.cs">
@@ -132,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="homeTab.resx">
       <DependentUpon>homeTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewsPage.resx">
+      <DependentUpon>ReviewsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

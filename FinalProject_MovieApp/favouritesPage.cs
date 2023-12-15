@@ -78,5 +78,34 @@ namespace FinalProject_MovieApp
                 MessageBox.Show($"Error loading image: {imageUrl} {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void removeBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Define the filename based on the username
+                string preferencesFileName = $"{Username}_preferences.txt";
+
+                // Check if the preferences file exists
+                if (File.Exists(preferencesFileName))
+                {
+                    // Clear all data in the preferences file
+                    File.WriteAllText(preferencesFileName, "");
+
+                    // Inform the user that data has been cleared
+                    MessageBox.Show("Favourites List cleared successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("No preferences found for the user.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
