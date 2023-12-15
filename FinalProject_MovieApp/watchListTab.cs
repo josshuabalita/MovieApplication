@@ -12,7 +12,9 @@ namespace FinalProject_MovieApp
 {
     public partial class watchListTab : UserControl
     {
-        public event EventHandler WatchListTabClicked; 
+        public event EventHandler WatchListTabClicked;
+        private string username;
+
         public watchListTab()
         {
             InitializeComponent();
@@ -22,18 +24,31 @@ namespace FinalProject_MovieApp
 
         private void watchListTab_Click(object sender, EventArgs e)
         {
-            OnWatchListTabClicked();
-        }
+            PromptForUsernameAndOpenWatchListPage();
 
-        protected virtual void OnWatchListTabClicked()
+        }
+        private void PromptForUsernameAndOpenWatchListPage()
         {
-            WatchListTabClicked?.Invoke(this, EventArgs.Empty);
-            OpenWatchListPage();
+            InputDialog inputDialog = new InputDialog("Enter your registered username:");
+            if (inputDialog.ShowDialog() == DialogResult.OK)
+            {
+                username = inputDialog.InputText;
+                if (!string.IsNullOrWhiteSpace(username))
+                {
+                    OpenWatchListPage(username);
+                }
+                else
+                {
+                    MessageBox.Show("Username cannot be empty. Please enter a valid username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
-        private void OpenWatchListPage()
+        
+
+        private void OpenWatchListPage(string username)
         { 
-            watchListPage watchListForm = new watchListPage();
+            WatchListPage watchListForm = new WatchListPage(username);
             if (this.ParentForm != null)
             {
                 this.ParentForm.Hide();

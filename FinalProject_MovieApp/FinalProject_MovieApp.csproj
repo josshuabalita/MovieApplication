@@ -82,7 +82,6 @@
     <Compile Include="homeTab.Designer.cs">
       <DependentUpon>homeTab.cs</DependentUpon>
     </Compile>
-
     <Compile Include="InputDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,14 +89,12 @@
       <DependentUpon>InputDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Microsoft\VisualBasic\Interaction.cs" />
-
     <Compile Include="ReviewsPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReviewsPage.Designer.cs">
       <DependentUpon>ReviewsPage.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartingScreen.cs">
@@ -118,11 +115,11 @@
     <Compile Include="usernameTab.Designer.cs">
       <DependentUpon>usernameTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="watchListPage.cs">
+    <Compile Include="WatchListPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="watchListPage.Designer.cs">
-      <DependentUpon>watchListPage.cs</DependentUpon>
+    <Compile Include="WatchListPage.Designer.cs">
+      <DependentUpon>WatchListPage.cs</DependentUpon>
     </Compile>
     <Compile Include="watchListTab.cs">
       <SubType>UserControl</SubType>
@@ -163,8 +160,8 @@
     <EmbeddedResource Include="usernameTab.resx">
       <DependentUpon>usernameTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="watchListPage.resx">
-      <DependentUpon>watchListPage.cs</DependentUpon>
+    <EmbeddedResource Include="WatchListPage.resx">
+      <DependentUpon>WatchListPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="watchListTab.resx">
       <DependentUpon>watchListTab.cs</DependentUpon>

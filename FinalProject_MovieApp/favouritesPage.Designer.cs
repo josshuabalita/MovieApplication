@@ -166,15 +166,7 @@
 
             // startingLabel
             // 
-            this.startingLabel.AutoSize = true;
-            this.startingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startingLabel.ForeColor = System.Drawing.Color.Red;
-            this.startingLabel.Location = new System.Drawing.Point(16, 33);
-            this.startingLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.startingLabel.Name = "startingLabel";
-            this.startingLabel.Size = new System.Drawing.Size(224, 36);
-            this.startingLabel.TabIndex = 17;
-            this.startingLabel.Text = "Movie Streams";
+           
             // 
 
             // startingLabel_2

@@ -33,7 +33,7 @@ namespace FinalProject_MovieApp
 
         private void OpenUsernameBox()
         {
-            watchListPage watchListForm = new watchListPage();
+            WatchListPage watchListForm = new WatchListPage();
             if (this.ParentForm != null)
             {
                 this.ParentForm.Hide();
