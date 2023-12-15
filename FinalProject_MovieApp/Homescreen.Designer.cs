@@ -77,11 +77,13 @@
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
-
             this.startingLabel = new System.Windows.Forms.Label();
-
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.tabs1 = new FinalProject_MovieApp.tabs();
-
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -102,6 +104,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchByTitleButton
@@ -273,20 +280,6 @@
             this.Movies.TabIndex = 55;
             this.Movies.Text = "Movies";
             // 
-
-            // startingLabel
-            // 
-            this.startingLabel.AutoSize = true;
-            this.startingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startingLabel.ForeColor = System.Drawing.Color.Red;
-            this.startingLabel.Location = new System.Drawing.Point(16, 28);
-            this.startingLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.startingLabel.Name = "startingLabel";
-            this.startingLabel.Size = new System.Drawing.Size(224, 36);
-            this.startingLabel.TabIndex = 59;
-            this.startingLabel.Text = "Movie Streams";
-            // 
-
             // Tvshows
             // 
             this.Tvshows.AutoSize = true;
@@ -578,32 +571,86 @@
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Black;
-            this.label21.Font = new System.Drawing.Font("Sans Serif Collection", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.Control;
-
-            this.label21.Location = new System.Drawing.Point(545, 30);
+            this.label21.Location = new System.Drawing.Point(700, 43);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(145, 52);
+            this.label21.Size = new System.Drawing.Size(108, 31);
             this.label21.TabIndex = 81;
             this.label21.Text = "label21";
             // 
             // startingLabel
             // 
             this.startingLabel.AutoSize = true;
-            this.startingLabel.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startingLabel.ForeColor = System.Drawing.Color.Red;
             this.startingLabel.Location = new System.Drawing.Point(12, 23);
+            this.startingLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.startingLabel.Name = "startingLabel";
-            this.startingLabel.Size = new System.Drawing.Size(308, 59);
+            this.startingLabel.Size = new System.Drawing.Size(224, 36);
             this.startingLabel.TabIndex = 82;
             this.startingLabel.Text = "Movie Streams";
-
-            this.label21.Location = new System.Drawing.Point(700, 43);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(92, 29);
-            this.label21.TabIndex = 81;
-            this.label21.Text = "label21";
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.BackColor = System.Drawing.Color.White;
+            this.pictureBox21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox21.BackgroundImage")));
+            this.pictureBox21.ErrorImage = null;
+            this.pictureBox21.Location = new System.Drawing.Point(1290, 459);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox21.TabIndex = 83;
+            this.pictureBox21.TabStop = false;
+            this.pictureBox21.Click += new System.EventHandler(this.pictureBox21_Click);
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.BackColor = System.Drawing.Color.White;
+            this.pictureBox22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox22.BackgroundImage")));
+            this.pictureBox22.ErrorImage = null;
+            this.pictureBox22.Location = new System.Drawing.Point(1290, 561);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox22.TabIndex = 84;
+            this.pictureBox22.TabStop = false;
+            this.pictureBox22.Click += new System.EventHandler(this.pictureBox22_Click);
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.BackColor = System.Drawing.Color.White;
+            this.pictureBox23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox23.BackgroundImage")));
+            this.pictureBox23.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox23.ErrorImage")));
+            this.pictureBox23.Location = new System.Drawing.Point(1290, 672);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox23.TabIndex = 85;
+            this.pictureBox23.TabStop = false;
+            this.pictureBox23.Click += new System.EventHandler(this.pictureBox23_Click);
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.BackColor = System.Drawing.Color.White;
+            this.pictureBox24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox24.BackgroundImage")));
+            this.pictureBox24.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox24.ErrorImage")));
+            this.pictureBox24.Location = new System.Drawing.Point(1290, 774);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox24.TabIndex = 86;
+            this.pictureBox24.TabStop = false;
+            this.pictureBox24.Click += new System.EventHandler(this.pictureBox24_Click);
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.BackColor = System.Drawing.Color.White;
+            this.pictureBox25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox25.BackgroundImage")));
+            this.pictureBox25.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox25.ErrorImage")));
+            this.pictureBox25.Location = new System.Drawing.Point(1290, 862);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox25.TabIndex = 87;
+            this.pictureBox25.TabStop = false;
+            this.pictureBox25.Click += new System.EventHandler(this.pictureBox25_Click);
             // 
             // tabs1
             // 
@@ -612,7 +659,6 @@
             this.tabs1.Name = "tabs1";
             this.tabs1.Size = new System.Drawing.Size(824, 86);
             this.tabs1.TabIndex = 58;
-
             // 
             // Homescreen
             // 
@@ -620,10 +666,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
-
-            this.ClientSize = new System.Drawing.Size(1540, 845);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.pictureBox25);
+            this.Controls.Add(this.pictureBox24);
+            this.Controls.Add(this.pictureBox23);
+            this.Controls.Add(this.pictureBox22);
+            this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.startingLabel);
-
             this.Controls.Add(this.label21);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox19);
@@ -698,6 +747,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -754,6 +808,11 @@
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label startingLabel;
+        private System.Windows.Forms.PictureBox pictureBox21;
+        private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.PictureBox pictureBox24;
+        private System.Windows.Forms.PictureBox pictureBox25;
     }
 }
 

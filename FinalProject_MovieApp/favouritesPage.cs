@@ -94,7 +94,7 @@ namespace FinalProject_MovieApp
 
                     // Inform the user that data has been cleared
                     MessageBox.Show("Favourites List cleared successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
+                    
                 }
                 else
                 {

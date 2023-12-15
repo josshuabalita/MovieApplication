@@ -37,6 +37,12 @@ namespace FinalProject_MovieApp
             pictureBox18.Visible = false;
             pictureBox19.Visible = false;
             pictureBox20.Visible = false;
+            pictureBox21.Visible = false;
+            pictureBox22.Visible = false;
+            pictureBox23.Visible = false;
+            pictureBox24.Visible = false;
+            pictureBox25.Visible = false;
+
             label21.Text = $"Welcome, {username}!";
            
         }
@@ -70,6 +76,11 @@ namespace FinalProject_MovieApp
             pictureBox18.Visible = true;
             pictureBox19.Visible = true;
             pictureBox20.Visible = true;
+            pictureBox21.Visible = true;
+                pictureBox22.Visible = true;
+            pictureBox23.Visible = true;
+            pictureBox24.Visible = true;
+            pictureBox25.Visible = true;
 
             try
             {
@@ -124,7 +135,6 @@ namespace FinalProject_MovieApp
                 path4 = movies[3].backdrop_path;
                 path5 = movies[4].backdrop_path;
 
-                MessageBox.Show($"Tag: {path1}", "Movie Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
          
             for (int i = 0; i < Math.Min(5, movies.Count); i++)
@@ -434,6 +444,20 @@ namespace FinalProject_MovieApp
             }
         }
 
+        private void SaveUserWatchListPreference(string username, string backdropPath, string labelText)
+        {
+            // Define a filename based on the username
+            string preferencesFileName = $"{username}_watchlist_preferences.txt";
+
+            // Save the backdrop_path and label text to the file
+            using (StreamWriter writer = new StreamWriter(preferencesFileName, true))
+            {
+                writer.WriteLine($"Backdrop Path: {backdropPath}");
+                writer.WriteLine($"Label Text: {labelText}");
+                writer.WriteLine();
+            }
+        }
+
         private string GetLabelText(int labelNumber)
         {
             Label label = GetLabelByNumber(labelNumber);
@@ -541,5 +565,107 @@ namespace FinalProject_MovieApp
             movieByGenreForm.Show();
         }
 
+        private void pictureBox21_Click(object sender, EventArgs e)
+        {
+            // Get the movie details associated with pictureBox11 from its Tag property
+
+            string imageUrl = $"https://image.tmdb.org/t/p/w500/{path1}";
+
+
+
+
+            string labelText = GetLabelText(16);
+
+            // Save the information to a file for the current username
+            SaveUserWatchListPreference(username, imageUrl, labelText);
+            MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            // Optionally, you can show a message to indicate that the preference is saved
+        }
+
+        private void pictureBox22_Click(object sender, EventArgs e)
+        {
+            // Get the movie details associated with pictureBox11 from its Tag property
+
+            string imageUrl = $"https://image.tmdb.org/t/p/w500/{path2}";
+
+
+            // Assuming movie is not null
+
+
+            // Get the original poster path and label text
+
+            string labelText = GetLabelText(17);
+
+            // Save the information to a file for the current username
+            SaveUserWatchListPreference(username, imageUrl, labelText);
+            MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            
+        }
+
+        private void pictureBox23_Click(object sender, EventArgs e)
+        {
+            // Get the movie details associated with pictureBox11 from its Tag property
+
+            string imageUrl = $"https://image.tmdb.org/t/p/w500/{path3}";
+
+
+            // Assuming movie is not null
+
+
+            // Get the original poster path and label text
+
+            string labelText = GetLabelText(17);
+
+            // Save the information to a file for the current username
+            SaveUserWatchListPreference(username, imageUrl, labelText);
+            MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+           
+        }
+
+        private void pictureBox24_Click(object sender, EventArgs e)
+        {
+            // Get the movie details associated with pictureBox11 from its Tag property
+
+            string imageUrl = $"https://image.tmdb.org/t/p/w500/{path4}";
+
+
+            // Assuming movie is not null
+
+
+            // Get the original poster path and label text
+
+            string labelText = GetLabelText(17);
+
+            // Save the information to a file for the current username
+            SaveUserWatchListPreference(username, imageUrl, labelText);
+            MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+         
+        }
+
+        private void pictureBox25_Click(object sender, EventArgs e)
+        {
+            // Get the movie details associated with pictureBox11 from its Tag property
+
+            string imageUrl = $"https://image.tmdb.org/t/p/w500/{path5}";
+
+
+            // Assuming movie is not null
+
+
+            // Get the original poster path and label text
+
+            string labelText = GetLabelText(17);
+
+            // Save the information to a file for the current username
+            SaveUserWatchListPreference(username, imageUrl, labelText);
+            MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+           
+        }
     }
 }
