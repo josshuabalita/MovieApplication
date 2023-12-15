@@ -39,15 +39,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.removeBtn = new System.Windows.Forms.Button();
-            this.startingLabel = new System.Windows.Forms.Label();
             this.startingLabel_2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabs1 = new FinalProject_MovieApp.tabs();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -163,6 +163,7 @@
             this.removeBtn.UseVisualStyleBackColor = false;
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
+
             // startingLabel
             // 
             this.startingLabel.AutoSize = true;
@@ -175,16 +176,19 @@
             this.startingLabel.TabIndex = 17;
             this.startingLabel.Text = "Movie Streams";
             // 
+
             // startingLabel_2
             // 
             this.startingLabel_2.AutoSize = true;
             this.startingLabel_2.BackColor = System.Drawing.Color.Black;
-            this.startingLabel_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startingLabel_2.Font = new System.Drawing.Font("Sans Serif Collection", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startingLabel_2.ForeColor = System.Drawing.Color.Red;
             this.startingLabel_2.Location = new System.Drawing.Point(853, 121);
             this.startingLabel_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.startingLabel_2.Name = "startingLabel_2";
-            this.startingLabel_2.Size = new System.Drawing.Size(205, 46);
+
+            this.startingLabel_2.Size = new System.Drawing.Size(303, 79);
+
             this.startingLabel_2.TabIndex = 16;
             this.startingLabel_2.Text = "Favourites";
             this.startingLabel_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,6 +243,7 @@
             this.label5.TabIndex = 33;
             this.label5.Text = "label5";
             // 
+
             // label6
             // 
             this.label6.AutoSize = true;
@@ -250,6 +255,7 @@
             this.label6.TabIndex = 34;
             this.label6.Text = "label6";
             // 
+
             // tabs1
             // 
             this.tabs1.Location = new System.Drawing.Point(1336, 20);
@@ -258,6 +264,29 @@
             this.tabs1.Size = new System.Drawing.Size(824, 86);
             this.tabs1.TabIndex = 15;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(12, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(308, 59);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Movie Streams";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.Font = new System.Drawing.Font("Sans Serif Collection", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(548, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 52);
+            this.label6.TabIndex = 82;
+            this.label6.Text = "label6";
+            // 
             // FavouritesPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -265,6 +294,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1924, 1040);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -281,7 +311,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.removeBtn);
-            this.Controls.Add(this.startingLabel);
             this.Controls.Add(this.startingLabel_2);
             this.Controls.Add(this.tabs1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -316,7 +345,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button removeBtn;
-        private System.Windows.Forms.Label startingLabel;
         private System.Windows.Forms.Label startingLabel_2;
         private tabs tabs1;
         private System.Windows.Forms.Label label1;
@@ -324,6 +352,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
     }
 }

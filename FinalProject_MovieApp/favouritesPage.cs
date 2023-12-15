@@ -23,7 +23,7 @@ namespace FinalProject_MovieApp
             label6.Text = $"Welcome, {Username}!";
         }
 
-        private void LoadUserPreferences()
+        public void LoadUserPreferences()
         {
             try
             {
