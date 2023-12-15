@@ -47,7 +47,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Movies = new System.Windows.Forms.Label();
-            this.startingLabel = new System.Windows.Forms.Label();
             this.Tvshows = new System.Windows.Forms.Label();
             this.Reviews = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -80,6 +79,7 @@
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.startingLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -284,17 +284,6 @@
             this.Movies.Size = new System.Drawing.Size(90, 29);
             this.Movies.TabIndex = 55;
             this.Movies.Text = "Movies";
-            // 
-            // startingLabel
-            // 
-            this.startingLabel.AutoSize = true;
-            this.startingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startingLabel.ForeColor = System.Drawing.Color.Red;
-            this.startingLabel.Location = new System.Drawing.Point(12, 23);
-            this.startingLabel.Name = "startingLabel";
-            this.startingLabel.Size = new System.Drawing.Size(186, 29);
-            this.startingLabel.TabIndex = 59;
-            this.startingLabel.Text = "Movie Streams";
             // 
             // Tvshows
             // 
@@ -592,13 +581,24 @@
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Black;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Sans Serif Collection", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(525, 35);
+            this.label21.Location = new System.Drawing.Point(545, 30);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(70, 24);
+            this.label21.Size = new System.Drawing.Size(145, 52);
             this.label21.TabIndex = 81;
             this.label21.Text = "label21";
+            // 
+            // startingLabel
+            // 
+            this.startingLabel.AutoSize = true;
+            this.startingLabel.Font = new System.Drawing.Font("Sans Serif Collection", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startingLabel.ForeColor = System.Drawing.Color.Red;
+            this.startingLabel.Location = new System.Drawing.Point(12, 23);
+            this.startingLabel.Name = "startingLabel";
+            this.startingLabel.Size = new System.Drawing.Size(308, 59);
+            this.startingLabel.TabIndex = 82;
+            this.startingLabel.Text = "Movie Streams";
             // 
             // Homescreen
             // 
@@ -607,6 +607,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1540, 845);
+            this.Controls.Add(this.startingLabel);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox19);
@@ -629,7 +630,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Reviews);
             this.Controls.Add(this.Tvshows);
-            this.Controls.Add(this.startingLabel);
             this.Controls.Add(this.tabs1);
             this.Controls.Add(this.Movies);
             this.Controls.Add(this.pictureBox6);
@@ -708,7 +708,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Movies;
         private tabs tabs1;
-        private System.Windows.Forms.Label startingLabel;
         private System.Windows.Forms.Label Tvshows;
         private System.Windows.Forms.Label Reviews;
         private System.Windows.Forms.PictureBox pictureBox10;
@@ -740,6 +739,7 @@
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label startingLabel;
     }
 }
 
