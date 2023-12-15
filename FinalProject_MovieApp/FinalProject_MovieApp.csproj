@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="favouritesPage.cs">
+    <Compile Include="FavouritesPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="favouritesPage.Designer.cs">
-      <DependentUpon>favouritesPage.cs</DependentUpon>
+    <Compile Include="FavouritesPage.Designer.cs">
+      <DependentUpon>FavouritesPage.cs</DependentUpon>
     </Compile>
     <Compile Include="favouritesTab.cs">
       <SubType>UserControl</SubType>
@@ -114,8 +114,8 @@
     <Compile Include="watchListTab.Designer.cs">
       <DependentUpon>watchListTab.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="favouritesPage.resx">
-      <DependentUpon>favouritesPage.cs</DependentUpon>
+    <EmbeddedResource Include="FavouritesPage.resx">
+      <DependentUpon>FavouritesPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="favouritesTab.resx">
       <DependentUpon>favouritesTab.cs</DependentUpon>
@@ -160,12 +160,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -214,5 +212,4 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-
 </Project>

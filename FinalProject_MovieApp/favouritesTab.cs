@@ -10,14 +10,17 @@ using System.Windows.Forms;
 
 namespace FinalProject_MovieApp
 {
+
     public partial class favouritesTab : UserControl
     {
+
         public event EventHandler FavouritesTabClicked;
 
         public favouritesTab()
         {
             InitializeComponent();
             this.Click += faveTab_Click;
+
         }
 
         private void faveTab_Click(object sender, EventArgs e)
@@ -32,7 +35,7 @@ namespace FinalProject_MovieApp
 
         private void OpenFavouritesPage()
         {
-            favouritesPage faveForm = new favouritesPage();
+            FavouritesPage faveForm = new FavouritesPage();
             if (this.ParentForm != null)
             {
                 this.ParentForm.Hide();

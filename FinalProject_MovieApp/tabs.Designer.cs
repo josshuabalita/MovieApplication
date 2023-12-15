@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.homeTab1 = new FinalProject_MovieApp.homeTab();
-            this.favouritesTab1 = new FinalProject_MovieApp.favouritesTab();
-            this.watchListTab1 = new FinalProject_MovieApp.watchListTab();
             this.usernameTab1 = new FinalProject_MovieApp.usernameTab();
+            this.watchListTab1 = new FinalProject_MovieApp.watchListTab();
+            this.favouritesTab1 = new FinalProject_MovieApp.favouritesTab();
+            this.homeTab1 = new FinalProject_MovieApp.homeTab();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,19 +49,12 @@
             this.panel1.Size = new System.Drawing.Size(618, 70);
             this.panel1.TabIndex = 0;
             // 
-            // homeTab1
+            // usernameTab1
             // 
-            this.homeTab1.Location = new System.Drawing.Point(0, 0);
-            this.homeTab1.Name = "homeTab1";
-            this.homeTab1.Size = new System.Drawing.Size(150, 70);
-            this.homeTab1.TabIndex = 0;
-            // 
-            // favouritesTab1
-            // 
-            this.favouritesTab1.Location = new System.Drawing.Point(156, 0);
-            this.favouritesTab1.Name = "favouritesTab1";
-            this.favouritesTab1.Size = new System.Drawing.Size(150, 70);
-            this.favouritesTab1.TabIndex = 1;
+            this.usernameTab1.Location = new System.Drawing.Point(468, 0);
+            this.usernameTab1.Name = "usernameTab1";
+            this.usernameTab1.Size = new System.Drawing.Size(150, 70);
+            this.usernameTab1.TabIndex = 3;
             // 
             // watchListTab1
             // 
@@ -70,12 +63,20 @@
             this.watchListTab1.Size = new System.Drawing.Size(150, 70);
             this.watchListTab1.TabIndex = 2;
             // 
-            // usernameTab1
+            // favouritesTab1
             // 
-            this.usernameTab1.Location = new System.Drawing.Point(468, 0);
-            this.usernameTab1.Name = "usernameTab1";
-            this.usernameTab1.Size = new System.Drawing.Size(150, 70);
-            this.usernameTab1.TabIndex = 3;
+            this.favouritesTab1.Location = new System.Drawing.Point(156, 0);
+            this.favouritesTab1.Name = "favouritesTab1";
+            this.favouritesTab1.Size = new System.Drawing.Size(150, 70);
+            this.favouritesTab1.TabIndex = 1;
+        
+            // 
+            // homeTab1
+            // 
+            this.homeTab1.Location = new System.Drawing.Point(0, 0);
+            this.homeTab1.Name = "homeTab1";
+            this.homeTab1.Size = new System.Drawing.Size(150, 70);
+            this.homeTab1.TabIndex = 0;
             // 
             // tabs
             // 

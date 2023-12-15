@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -19,20 +20,125 @@ namespace FinalProject_MovieApp
         private const int MaxMoviesPerLabels = 5;
         private const int MaxTVShowsPerLabels = 5;
 
-        public Homescreen()
+        public string username;  // Add a field to store the username
+
+
+        public Homescreen(string username = "")
         {
             InitializeComponent();
             InitializeEventHandlers();
             HideAllLabels();
             this.Text = "MovieStreams";
-            FetchAndDisplayData(MovieBaseUrl, MaxMoviesPerLabels);
-            FetchAndDisplayData(TVBaseUrl, MaxTVShowsPerLabels);
+            InitializeAsync();
+            this.username = username;  // Store the passed username
+
+
+            pictureBox16.Visible = false;
+            pictureBox17.Visible = false;
+            pictureBox18.Visible = false;
+            pictureBox19.Visible = false;
+            pictureBox20.Visible = false;
+            label21.Text = $"Welcome, {username}!";
+           
+        }
+       
+
+        private async void InitializeAsync()
+        {
+
+            await DisplayMoviesAndTVShowsAsync();
             FetchAndDisplayReviews(670292);
         }
 
+        private async Task DisplayMoviesAndTVShowsAsync()
+        {
+            await FetchAndDisplayData(MovieBaseUrl, MaxMoviesPerLabels);
+            await FetchAndDisplayData(TVBaseUrl, MaxTVShowsPerLabels);
+        }
+
+
         private void InitializeEventHandlers()
         {
+            SearchByTitleButton.Click += SearchByTitleButton_Click;
+
         }
+
+        private async void SearchByTitleButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Welcome, {username}!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            pictureBox16.Visible = true;
+            pictureBox17.Visible = true;
+            pictureBox18.Visible = true;
+            pictureBox19.Visible = true;
+            pictureBox20.Visible = true;
+
+            try
+            {
+                string searchQuery = textBox1.Text.Trim();
+
+                if (!string.IsNullOrEmpty(searchQuery))
+                {
+                    const string searchMovieBaseUrl = "https://api.themoviedb.org/3/search/movie";
+                    string searchUrl = $"{searchMovieBaseUrl}?api_key={ApiKey}&query={searchQuery}&page_size=5";
+
+                    using (HttpClient client = new HttpClient())
+                    {
+                        HttpResponseMessage response = await client.GetAsync(searchUrl);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string responseData = await response.Content.ReadAsStringAsync();
+                            MovieResponse searchResponse = JsonConvert.DeserializeObject<MovieResponse>(responseData);
+                            DisplaySearchedMovies(searchResponse.Results);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a search query.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+       public string path1;
+        public string path2;
+
+        private async Task DisplaySearchedMovies(List<Movie> movies)
+        {
+            int startingIndex = 11; // Set the index where the search results should start appearing
+            int labelIndex = 16;
+            if (movies[0].backdrop_path != null)
+            {
+                path1 = movies[0].backdrop_path;
+                path2 = movies[1].backdrop_path;
+
+                MessageBox.Show($"Tag: {path1}", "Movie Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+         
+            for (int i = 0; i < Math.Min(5, movies.Count); i++)
+            {
+                AddMovieTitleToLabel(movies[i], labelIndex + i);
+
+                PictureBox pictureBox = GetPictureBoxByNumber(startingIndex + i);
+                await DisplayMoviePoster(movies[i].backdrop_path, pictureBox);
+
+                // Set the Tag property of the PictureBox to store the movie details
+              
+
+            }
+        }
+
+
+
+
 
         private async Task FetchAndDisplayData(string apiUrl, int maxItems)
         {
@@ -95,9 +201,9 @@ namespace FinalProject_MovieApp
             }
         }
 
-        private async Task DisplayMovies(List<Movie> movies, int maxItems)
+        private async Task DisplayMovies(List<Movie> movies, int maxItems, bool clearControls = true)
         {
-            ClearLabelAndPictureBoxControls();
+          
 
             for (int i = 0; i < Math.Min(maxItems, movies.Count); i++)
             {
@@ -106,16 +212,18 @@ namespace FinalProject_MovieApp
             }
         }
 
+
         private async Task DisplayTVShows(List<TVShow> tvShows, int maxItems)
         {
-            ClearLabelAndPictureBoxControls();
+           
 
             for (int i = 0; i < Math.Min(maxItems, tvShows.Count); i++)
             {
-                AddTVShowTitleToLabel(tvShows[i], i + 6);
+                AddTVShowTitleToLabel(tvShows[i], i + 6); // Ensure you are using the correct label number here
                 await DisplayMovieBackdrop(tvShows[i].backdrop_path, GetPictureBoxByNumber(i + 6));
             }
         }
+
 
         private void DisplayReviews(List<MovieReview> reviews)
         {
@@ -125,14 +233,7 @@ namespace FinalProject_MovieApp
             }
         }
 
-        private void ClearLabelAndPictureBoxControls()
-        {
-            for (int i = 1; i <= 10; i++)
-            {
-                ClearPictureBox(GetPictureBoxByNumber(i));
-                ClearLabel(GetLabelByNumber(i));
-            }
-        }
+     
 
         private void ClearPictureBox(PictureBox pictureBox)
         {
@@ -253,6 +354,7 @@ namespace FinalProject_MovieApp
             }
         }
 
+
         private void AddReviewToLabel(MovieReview review, int labelNumber)
         {
             Label label = GetLabelByNumber(labelNumber);
@@ -340,6 +442,92 @@ namespace FinalProject_MovieApp
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        /// Save for specific user -----------------------------------------------------------------------------------------------------------------
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            // Get the movie details associated with pictureBox11 from its Tag property
+
+            string imageUrl = $"https://image.tmdb.org/t/p/w500/{path1}";
+
+
+      
+              
+                string labelText = GetLabelText(16);
+
+                // Save the information to a file for the current username
+                SaveUserPreference(username, imageUrl, labelText);
+                MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            FavouritesPage favouritesPage = new FavouritesPage(username);
+            favouritesPage.Show();
+                
+            // Optionally, you can show a message to indicate that the preference is saved
+
+        }
+        private void SaveUserPreference(string username, string backdropPath, string labelText)
+        {
+            // Define a filename based on the username
+            string preferencesFileName = $"{username}_preferences.txt";
+
+            // Save the backdrop_path and label text to the file
+            using (StreamWriter writer = new StreamWriter(preferencesFileName, true))
+            {
+                writer.WriteLine($"Backdrop Path: {backdropPath}");
+                writer.WriteLine($"Label Text: {labelText}");
+                writer.WriteLine();
+            }
+        }
+
+        private string GetLabelText(int labelNumber)
+        {
+            Label label = GetLabelByNumber(labelNumber);
+            return label?.Text ?? string.Empty;
+        }
+
+
+
+
+        /// Save for specific user -----------------------------------------------------------------------------------------------------------------
+
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            // Get the movie details associated with pictureBox11 from its Tag property
+
+            string imageUrl = $"https://image.tmdb.org/t/p/w500/{path2}";
+
+
+            // Assuming movie is not null
+
+
+            // Get the original poster path and label text
+
+            string labelText = GetLabelText(17);
+
+            // Save the information to a file for the current username
+            SaveUserPreference(username, imageUrl, labelText);
+            MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            FavouritesPage favouritesPage = new FavouritesPage(username);
+            favouritesPage.Show();
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox20_Click(object sender, EventArgs e)
         {
 
         }
