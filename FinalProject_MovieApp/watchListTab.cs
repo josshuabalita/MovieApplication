@@ -47,13 +47,14 @@ namespace FinalProject_MovieApp
         
 
         private void OpenWatchListPage(string username)
-        { 
-            WatchListPage watchListForm = new WatchListPage(username);
+        {
+            WatchListPage watchForm = new WatchListPage(username);
             if (this.ParentForm != null)
             {
                 this.ParentForm.Hide();
-                watchListForm.Closed += (s, args) => this.ParentForm.Close();
-                watchListForm.Show();
+                watchForm.Closed += (s, args) => this.ParentForm.Close();
+                watchForm.LoadUserPreferences();
+                watchForm.Show();
             }
         }
     }

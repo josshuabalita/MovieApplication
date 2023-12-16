@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -62,20 +63,49 @@ namespace FinalProject_MovieApp
             }
         }
 
-        private void SetImageForPictureBox(PictureBox pictureBox, string backdropPath)
+        private async void SetImageForPictureBox(PictureBox pictureBox, string backdropPath)
         {
             // Use the backdrop path to construct the full URL
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{backdropPath}";
 
-            // Load the image into the PictureBox
             try
             {
-                pictureBox.Load(imageUrl);
+                using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
+                {
+                    // Download the image data asynchronously
+                    byte[] imageData = await client.GetByteArrayAsync(imageUrl);
+
+                    // Create a MemoryStream from the image data
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        // Create an Image from the MemoryStream
+                        Image image = Image.FromStream(ms);
+
+                        // Resize the image to fit within the PictureBox
+                        Image resizedImage = ResizeImage(image, pictureBox.Width, pictureBox.Height);
+
+                        // Set the resized image to the PictureBox
+                        pictureBox.Image = resizedImage;
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading image: {imageUrl} {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private Image ResizeImage(Image image, int width, int height)
+        {
+            Bitmap resizedImage = new Bitmap(width, height);
+
+            using (Graphics g = Graphics.FromImage(resizedImage))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.DrawImage(image, 0, 0, width, height);
+            }
+
+            return resizedImage;
         }
 
         private void removeBtn_Click(object sender, EventArgs e)

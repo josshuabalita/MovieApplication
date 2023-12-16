@@ -118,5 +118,9 @@ namespace FinalProject_MovieApp
             label.ForeColor = System.Drawing.Color.White;
         }
 
+        private void ReviewsPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
