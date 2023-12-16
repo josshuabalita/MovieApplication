@@ -45,46 +45,52 @@
             this.panel1.Controls.Add(this.homeTab1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(618, 70);
+            this.panel1.Size = new System.Drawing.Size(824, 86);
             this.panel1.TabIndex = 0;
             // 
             // usernameTab1
             // 
-            this.usernameTab1.Location = new System.Drawing.Point(468, 0);
+            this.usernameTab1.Location = new System.Drawing.Point(624, 0);
+            this.usernameTab1.Margin = new System.Windows.Forms.Padding(5);
             this.usernameTab1.Name = "usernameTab1";
-            this.usernameTab1.Size = new System.Drawing.Size(150, 70);
+            this.usernameTab1.Size = new System.Drawing.Size(200, 86);
             this.usernameTab1.TabIndex = 3;
+            this.usernameTab1.Load += new System.EventHandler(this.usernameTab1_Load);
             // 
             // watchListTab1
             // 
-            this.watchListTab1.Location = new System.Drawing.Point(312, 0);
+            this.watchListTab1.Location = new System.Drawing.Point(416, 0);
+            this.watchListTab1.Margin = new System.Windows.Forms.Padding(5);
             this.watchListTab1.Name = "watchListTab1";
-            this.watchListTab1.Size = new System.Drawing.Size(150, 70);
+            this.watchListTab1.Size = new System.Drawing.Size(200, 86);
             this.watchListTab1.TabIndex = 2;
             // 
             // favouritesTab1
             // 
-            this.favouritesTab1.Location = new System.Drawing.Point(156, 0);
+            this.favouritesTab1.Location = new System.Drawing.Point(208, 0);
+            this.favouritesTab1.Margin = new System.Windows.Forms.Padding(5);
             this.favouritesTab1.Name = "favouritesTab1";
-            this.favouritesTab1.Size = new System.Drawing.Size(150, 70);
+            this.favouritesTab1.Size = new System.Drawing.Size(200, 86);
             this.favouritesTab1.TabIndex = 1;
-        
             // 
             // homeTab1
             // 
             this.homeTab1.Location = new System.Drawing.Point(0, 0);
+            this.homeTab1.Margin = new System.Windows.Forms.Padding(5);
             this.homeTab1.Name = "homeTab1";
-            this.homeTab1.Size = new System.Drawing.Size(150, 70);
+            this.homeTab1.Size = new System.Drawing.Size(200, 86);
             this.homeTab1.TabIndex = 0;
             // 
             // tabs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "tabs";
-            this.Size = new System.Drawing.Size(618, 70);
+            this.Size = new System.Drawing.Size(824, 86);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

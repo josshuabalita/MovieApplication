@@ -209,7 +209,7 @@ namespace FinalProject_MovieApp
 
             for (int i = 0; i < Math.Min(maxItems, tvShows.Count); i++)
             {
-                AddTVShowTitleToLabel(tvShows[i], i + 6); // Ensure you are using the correct label number here
+                AddTVShowTitleToLabel(tvShows[i], i + 6); 
                 await DisplayMovieBackdrop(tvShows[i].backdrop_path, GetPictureBoxByNumber(i + 6));
             }
         }
@@ -411,7 +411,7 @@ namespace FinalProject_MovieApp
         /// Save for specific user -----------------------------------------------------------------------------------------------------------------
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            // Get the movie details associated with pictureBox11 from its Tag property
+            // Get the movie details associated with pictureBox11 
 
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{path1}";
 
@@ -427,7 +427,7 @@ namespace FinalProject_MovieApp
             FavouritesPage favouritesPage = new FavouritesPage(username);
             favouritesPage.Show();
                 
-            // Optionally, you can show a message to indicate that the preference is saved
+            // the preference is saved
 
         }
         private void SaveUserPreference(string username, string backdropPath, string labelText)
@@ -472,12 +472,12 @@ namespace FinalProject_MovieApp
 
         private void pictureBox17_Click(object sender, EventArgs e)
         {
-            // Get the movie details associated with pictureBox11 from its Tag property
+            // Get the movie details associated with pictureBox
 
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{path2}";
 
 
-            // Assuming movie is not null
+           
 
 
             // Get the original poster path and label text
@@ -494,12 +494,11 @@ namespace FinalProject_MovieApp
 
         private void pictureBox18_Click(object sender, EventArgs e)
         {
-            // Get the movie details associated with pictureBox11 from its Tag property
+            // Get the movie details associated with pictureBox
 
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{path3}";
 
 
-            // Assuming movie is not null
 
 
             // Get the original poster path and label text
@@ -516,12 +515,12 @@ namespace FinalProject_MovieApp
 
         private void pictureBox19_Click(object sender, EventArgs e)
         {
-            // Get the movie details associated with pictureBox11 from its Tag property
+            // Get the movie details associated with pictureBox
 
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{path4}";
 
 
-            // Assuming movie is not null
+            
 
 
             // Get the original poster path and label text
@@ -538,12 +537,12 @@ namespace FinalProject_MovieApp
 
         private void pictureBox20_Click(object sender, EventArgs e)
         {
-            // Get the movie details associated with pictureBox11 from its Tag property
+            // Get the movie details associated with pictureBox
 
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{path5}";
 
 
-            // Assuming movie is not null
+            
 
 
             // Get the original poster path and label text
@@ -560,14 +559,14 @@ namespace FinalProject_MovieApp
 
         private void ViewAllMoviesButton_Click(object sender, EventArgs e)
         {
-            // Assuming movieByGenreForm is an instance of the MovieByGenre form
-            ReviewsPage movieByGenreForm = new ReviewsPage();
-            movieByGenreForm.Show();
+            // Assuming reviewsPage is an instance of the ReviewsPage form
+            ReviewsPage reviewsPage = new ReviewsPage();
+            reviewsPage.Show();
         }
 
         private void pictureBox21_Click(object sender, EventArgs e)
         {
-            // Get the movie details associated with pictureBox11 from its Tag property
+            // Get the movie details associated with pictureBox
 
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{path1}";
 
@@ -581,7 +580,6 @@ namespace FinalProject_MovieApp
             MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-            // Optionally, you can show a message to indicate that the preference is saved
         }
 
         private void pictureBox22_Click(object sender, EventArgs e)
@@ -591,7 +589,6 @@ namespace FinalProject_MovieApp
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{path2}";
 
 
-            // Assuming movie is not null
 
 
             // Get the original poster path and label text
@@ -607,12 +604,11 @@ namespace FinalProject_MovieApp
 
         private void pictureBox23_Click(object sender, EventArgs e)
         {
-            // Get the movie details associated with pictureBox11 from its Tag property
+            // Get the movie details associated with pictureBox
 
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{path3}";
 
 
-            // Assuming movie is not null
 
 
             // Get the original poster path and label text
@@ -628,12 +624,11 @@ namespace FinalProject_MovieApp
 
         private void pictureBox24_Click(object sender, EventArgs e)
         {
-            // Get the movie details associated with pictureBox11 from its Tag property
+            // Get the movie details associated with pictureBox
 
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{path4}";
 
 
-            // Assuming movie is not null
 
 
             // Get the original poster path and label text
@@ -649,12 +644,11 @@ namespace FinalProject_MovieApp
 
         private void pictureBox25_Click(object sender, EventArgs e)
         {
-            // Get the movie details associated with pictureBox11 from its Tag property
+            // Get the movie details associated with pictureBox
 
             string imageUrl = $"https://image.tmdb.org/t/p/w500/{path5}";
 
 
-            // Assuming movie is not null
 
 
             // Get the original poster path and label text

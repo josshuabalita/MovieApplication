@@ -133,7 +133,7 @@
             this.ViewAllMoviesButton.Name = "ViewAllMoviesButton";
             this.ViewAllMoviesButton.Size = new System.Drawing.Size(319, 71);
             this.ViewAllMoviesButton.TabIndex = 25;
-            this.ViewAllMoviesButton.Text = "View All Movies";
+            this.ViewAllMoviesButton.Text = "View Reviews";
             this.ViewAllMoviesButton.UseVisualStyleBackColor = false;
             this.ViewAllMoviesButton.Click += new System.EventHandler(this.ViewAllMoviesButton_Click);
             // 

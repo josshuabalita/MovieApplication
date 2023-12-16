@@ -17,6 +17,9 @@ namespace FinalProject_MovieApp
             InitializeComponent();
         }
 
-       
+        private void usernameTab1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
