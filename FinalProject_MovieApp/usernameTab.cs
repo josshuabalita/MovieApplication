@@ -22,23 +22,26 @@ namespace FinalProject_MovieApp
 
         private void userTab_Click(object sender, EventArgs e)
         {
-            OnUserTabClicked();
+            ShowExitDialog();
+        }
+
+        private void ShowExitDialog()
+        {
+            DialogResult result = MessageBox.Show("Do you want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                OnUserTabClicked();
+            }
         }
 
         protected virtual void OnUserTabClicked()
         {
             UsernameTabClicked?.Invoke(this, EventArgs.Empty);
-            OpenUsernameBox();
-        }
 
-        private void OpenUsernameBox()
-        {
-            WatchListPage watchListForm = new WatchListPage();
             if (this.ParentForm != null)
             {
-                this.ParentForm.Hide();
-                watchListForm.Closed += (s, args) => this.ParentForm.Close();
-                watchListForm.Show();
+                this.ParentForm.Close();
             }
         }
     }
