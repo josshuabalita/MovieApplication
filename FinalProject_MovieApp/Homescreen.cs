@@ -69,7 +69,7 @@ namespace FinalProject_MovieApp
 
         private async void SearchByTitleButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Welcome, {username}!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show($"Welcome, {username}!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             pictureBox16.Visible = true;
             pictureBox17.Visible = true;
@@ -359,7 +359,7 @@ namespace FinalProject_MovieApp
 
         private void CustomizeLabel(Label label)
         {
-            label.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label.Font = new System.Drawing.Font("Sans Serif Collection", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label.ForeColor = System.Drawing.Color.White;
         }
 
@@ -426,6 +426,7 @@ namespace FinalProject_MovieApp
 
             FavouritesPage favouritesPage = new FavouritesPage(username);
             favouritesPage.Show();
+
                 
             // Optionally, you can show a message to indicate that the preference is saved
 
@@ -490,6 +491,8 @@ namespace FinalProject_MovieApp
 
             FavouritesPage favouritesPage = new FavouritesPage(username);
             favouritesPage.Show();
+
+
         }
 
         private void pictureBox18_Click(object sender, EventArgs e)
@@ -512,6 +515,8 @@ namespace FinalProject_MovieApp
 
             FavouritesPage favouritesPage = new FavouritesPage(username);
             favouritesPage.Show();
+
+
         }
 
         private void pictureBox19_Click(object sender, EventArgs e)
@@ -534,6 +539,8 @@ namespace FinalProject_MovieApp
 
             FavouritesPage favouritesPage = new FavouritesPage(username);
             favouritesPage.Show();
+
+
         }
 
         private void pictureBox20_Click(object sender, EventArgs e)
@@ -556,6 +563,8 @@ namespace FinalProject_MovieApp
 
             FavouritesPage favouritesPage = new FavouritesPage(username);
             favouritesPage.Show();
+
+
         }
 
         private void ViewAllMoviesButton_Click(object sender, EventArgs e)
@@ -580,7 +589,8 @@ namespace FinalProject_MovieApp
             SaveUserWatchListPreference(username, imageUrl, labelText);
             MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
+            WatchListPage watchListPage = new WatchListPage(username);
+            watchListPage.Show();
             // Optionally, you can show a message to indicate that the preference is saved
         }
 
@@ -602,7 +612,8 @@ namespace FinalProject_MovieApp
             SaveUserWatchListPreference(username, imageUrl, labelText);
             MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            
+            WatchListPage watchListPage = new WatchListPage(username);
+            watchListPage.Show();
         }
 
         private void pictureBox23_Click(object sender, EventArgs e)
@@ -623,7 +634,8 @@ namespace FinalProject_MovieApp
             SaveUserWatchListPreference(username, imageUrl, labelText);
             MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-           
+            WatchListPage watchListPage = new WatchListPage(username);
+            watchListPage.Show();
         }
 
         private void pictureBox24_Click(object sender, EventArgs e)
@@ -644,7 +656,8 @@ namespace FinalProject_MovieApp
             SaveUserWatchListPreference(username, imageUrl, labelText);
             MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-         
+            WatchListPage watchListPage = new WatchListPage(username);
+            watchListPage.Show();
         }
 
         private void pictureBox25_Click(object sender, EventArgs e)
@@ -665,7 +678,8 @@ namespace FinalProject_MovieApp
             SaveUserWatchListPreference(username, imageUrl, labelText);
             MessageBox.Show("Preference saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-           
+            WatchListPage watchListPage = new WatchListPage(username);
+            watchListPage.Show();
         }
     }
 }
