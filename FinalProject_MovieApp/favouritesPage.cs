@@ -20,7 +20,6 @@ namespace FinalProject_MovieApp
 
         private void ShowWelcomeMessage()
         {
-            MessageBox.Show($"Welcome, {Username}!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
             label6.Text = $"Welcome, {Username}!";
         }
 

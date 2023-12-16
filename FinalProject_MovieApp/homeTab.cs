@@ -13,6 +13,8 @@ namespace FinalProject_MovieApp
     public partial class homeTab : UserControl
     {
         public event EventHandler HomeTabClicked;
+        private string username;
+
         public homeTab()
         {
             InitializeComponent();
@@ -21,18 +23,35 @@ namespace FinalProject_MovieApp
 
         private void home_Click(object sender, EventArgs e)
         {
-            OpenHomePage();
+            PromptForUsernameAndOpenHomePage();
         }
 
         protected virtual void OnHomeTabClicked()
         { 
             HomeTabClicked?.Invoke(this, EventArgs.Empty);
-            OpenHomePage();
+            PromptForUsernameAndOpenHomePage();    
         }
 
+        public void PromptForUsernameAndOpenHomePage()
+        {
+            InputDialog inputDialog = new InputDialog("Enter your registered username:");
+            if (inputDialog.ShowDialog() == DialogResult.OK)
+            {
+                username = inputDialog.InputText;
+                if (!string.IsNullOrWhiteSpace(username))
+                {
+                    OpenHomePage();
+                }
+                else
+                {
+                    MessageBox.Show("Username cannot be empty. Please enter a valid username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
         private void OpenHomePage()
         {
-            Homescreen homescreenForm = new Homescreen();
+            Homescreen homescreenForm = new Homescreen(username);
             if (this.ParentForm != null)
             {
                 this.ParentForm.Hide();
